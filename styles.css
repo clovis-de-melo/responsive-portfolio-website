@@ -44,6 +44,7 @@
     gap: 2rem;
 }
 
+
 li a {
     position: relative;
     color: white;
@@ -51,7 +52,7 @@ li a {
 }
 
 li a:hover {
-    
+    color: rgb(111, 218, 111);
 }
 
 li a::before {
@@ -80,11 +81,11 @@ li a:hover::before {
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(183, 234, 151), rgb(91, 120, 6));
+    background: linear-gradient(to right, rgb(136, 223, 81), rgb(91, 120, 6));
 }
 
 .visit-btn:hover {
-    background: linear-gradient(to right, rgb(158, 245, 143), rgb(149, 198, 141));
+    background: linear-gradient(to right, rgb(73, 157, 58), rgb(149, 198, 141));
     transform: scale(1.03);
 }
 
