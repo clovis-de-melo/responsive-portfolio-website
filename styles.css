@@ -33,6 +33,7 @@
     font-weight: 600;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
+    opacity: 0.8;
 }
 
 .logo:hover {
@@ -92,4 +93,93 @@ li a:hover::before {
 #menu-icon {
     display: none;
     font-size: 2rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid red;*/
+    margin-left: 50px;
+}
+
+.about img {
+    width: 18vw;
+    border-radius: 100px;
+}
+
+.info-box {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.info-box h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.info-box h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.info-box span {
+    background: linear-gradient(to right, rgb(136, 223, 81), rgb(91, 120, 6));
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 400;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.socials i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.socials i:hover {
+    transform: scale(1.1);
 }
