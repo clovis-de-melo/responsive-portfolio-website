@@ -212,42 +212,42 @@ section {
 }
 
 .about-info img {
-    height: 35vh;
-    border-radius: 10px;
+    width: 24vw;
+    border-radius: 3rem;
     margin-left: 50px;
-}
-
-
-
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-       opacity: 1;
-    }
 }
 
 
 /* Experience section starts here */
 
-#experience-section {
-    min-height: 100vh;
-    background-color: white;
-}
-
-
-
-/* Recommendations section starts here */
-
-#rec-section {
+.experience {
     min-height: 100vh;
 }
 
-.rec-heading {
+.experience-info {
+    /*border: 1px solid blue;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.experience-info .grid-container {
+    /*border: 1px solid red;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      
+}
+
+.grid-container .grid-card {
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
     text-align: center;
-    font-size: 3rem;
-    opacity: 0.8;
+    padding: 30px 20px;
+}
+
+.grid-container .grid-card .grid-card-img {
+    height: 200px;
+    width: 220px;
 }
 
