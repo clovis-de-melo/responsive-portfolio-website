@@ -84,7 +84,7 @@ li a .active {
     color: rgb(111, 218, 111);
 }
 
-/* li a::before {
+li a::before {
     position: absolute;
     content: "";
     width: 0;
@@ -98,7 +98,7 @@ li a .active {
 
 li a:hover::before {
     width: 100%;
-} */
+}
 
 
 .visit-btn {
@@ -431,7 +431,7 @@ section {
 
 #recommendations {
     /* height: 100vh; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .rec-image img {
