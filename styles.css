@@ -430,7 +430,7 @@ section {
 /* Recommendations Section Starts Here */ 
 
 #recommendations {
-    height: 100vh;
+    /* height: 100vh; */
     border: 2px solid black;
 }
 
@@ -438,4 +438,16 @@ section {
     height: 600px;
     width: 600px;
     object-fit: contain;
+}
+
+.image-test {
+    border: 1px solid black;
+    height: 300px;
+    width: 600px;
+}
+
+.image-test img {
+    height: 300px;
+    width: 600px;
+    /* object-fit: contain; */
 }
