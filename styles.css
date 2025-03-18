@@ -10,6 +10,29 @@
     scroll-behavior: smooth;
 }
 
+/* Scroll Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        /* scale: 0.5; */
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+       /*  scale: 1; */
+       transform: translateX(0px);
+    }
+}
+
+#about, #experience, #projects, #recommendations, #technologies, #contact {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Header Section Starts Here */
+
 .header-section {
     position: fixed;
     top: 1rem;
@@ -29,7 +52,7 @@
 
 .logo {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
@@ -37,7 +60,8 @@
 }
 
 .logo:hover {
-    transform: scale(1.1);   
+    transform: scale(1.1);
+    color: rgb(111, 218, 111);   
 }
 
 .nav-links {
@@ -56,7 +80,11 @@ li a:hover {
     color: rgb(111, 218, 111);
 }
 
-li a::before {
+li a .active {
+    color: rgb(111, 218, 111);
+}
+
+/* li a::before {
     position: absolute;
     content: "";
     width: 0;
@@ -70,7 +98,8 @@ li a::before {
 
 li a:hover::before {
     width: 100%;
-}
+} */
+
 
 .visit-btn {
     padding: 0.8rem 1.5rem;
@@ -82,7 +111,7 @@ li a:hover::before {
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(162, 179, 146), rgb(91, 120, 6));
+    background: rgb(76, 127, 76);
 }
 
 .visit-btn:hover {
@@ -95,6 +124,14 @@ li a:hover::before {
     font-size: 2rem;
 }
 
+.fa-linkedin {
+    color: black;
+}
+
+.fa-github  {
+    color: black;
+}
+
 
 section {
     min-height: 100vh;
@@ -103,13 +140,16 @@ section {
     position: relative;
 }
 
-.home {
+/* Home Section Starts Here */
+
+#home {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
-.home .home-container {
+#home .home-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,15 +167,16 @@ section {
     gap: 1.5rem;
 }
 
-.info-box h3 {
+/* .info-box h3 {
     font-size: 1.8rem;
     font-weight: 500;
     opacity: 0.8;
-}
+} */
 
 .info-box h1 {
     font-size: 4rem;
     font-weight: 600;
+    color: black;
 }
 
 .info-box span {
@@ -179,11 +220,42 @@ section {
     transform: scale(1.1);
 }
 
+
+/* Type Effect & Cursor blinking */
+
+.type-text {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+    border-right: 3px solid;
+    /* width: 100%; */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s, steps(8),
+        cursor .4s step-end infinite alternate;
+}
+
+/* Cursor Blinking */
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+/* Type Animation */
+
+@keyframes typing {
+    from { width: 0;}
+}
+
+
 /* About section starts here */
 
 .about {
     /*border: 1px solid red;*/
     min-height: 100vh;
+    background-color: white;
 }
 
 .section-title {
@@ -192,13 +264,16 @@ section {
     font-weight: 600;
     margin-bottom: 7rem;
     opacity: 0.9;
+    color: black;
 }
 
 .about-info {
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
-
+    /* background-color: rgb(41, 46, 41); */
+    /* border: 2px solid #E1E2E3; */
+    border-radius: 15px;
 }
 
 .about-info-text {
@@ -209,12 +284,36 @@ section {
     gap: 2rem;
     text-align: center;
     opacity: 0.8;
+    /* text-shadow: rgb(178, 176, 170) 2px 1px 10px; */
 }
 
 .about-info img {
     width: 24vw;
     border-radius: 3rem;
     margin-left: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+/* .about-image {
+    height: 24vh;
+    width: 24vw;
+    border-radius: 3rem;
+    margin-left: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+}
+ */
+#about-h2 {
+    font-size: 30px;
+    text-shadow: rgb(10, 10, 10) 1px 0 2px;
+    color: black;
 }
 
 
@@ -222,6 +321,8 @@ section {
 
 .experience {
     min-height: 100vh;
+    background-color: white;
+    color: black;
 }
 
 .experience-info {
@@ -230,6 +331,13 @@ section {
     align-items: center;
     justify-content: center;
     gap: 5rem;
+}
+
+.grid-container {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100vw;
+    gap: 10px;
 }
 
 .experience-info .grid-container {
@@ -244,6 +352,10 @@ section {
     border-radius: 5px;
     text-align: center;
     padding: 30px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #E1E2E3;
+    cursor: pointer;
 }
 
 .grid-container .grid-card .grid-card-img {
@@ -251,3 +363,79 @@ section {
     width: 220px;
 }
 
+.projects-heading-three {
+    text-align: center;
+}
+
+.projects-paragraph {
+    text-align: center;
+}
+
+/* Projects Section Starts Here */
+
+#projects {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.projects-info {
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+}
+
+.projects-paragraph {
+    margin-top: 20px;
+}
+
+.projects-grid-container {
+    display: flex;
+    /* justify-content: center; */
+   /*  width: 100vw; */
+    gap: 10px;
+    /* border: 1px solid red; */
+    margin-top: 100px;
+}
+
+.projects-grid-card {
+    cursor: pointer;
+    object-fit: cover;
+
+}
+
+.projects-grid-container .projects-grid-card {
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #E1E2E3;
+}
+
+.projects-grid-card img {
+    height: 200px;
+    width: 400px;
+    object-fit: cover;
+    padding-top: 40px;
+    /* border: 2px solid #E1E2E3; */
+}
+
+.projects-grid-card img:hover {
+    -webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(4px);
+}
+
+/* Recommendations Section Starts Here */ 
+
+#recommendations {
+    height: 100vh;
+    border: 2px solid black;
+}
+
+.rec-image img {
+    height: 600px;
+    width: 600px;
+    object-fit: contain;
+}
