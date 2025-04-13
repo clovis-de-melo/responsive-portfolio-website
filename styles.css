@@ -451,3 +451,12 @@ section {
     width: 600px;
     /* object-fit: contain; */
 }
+
+#technologies {
+    color: white;
+    background-color: black;
+}
+
+#technologies h2 {
+    color: white;
+}
